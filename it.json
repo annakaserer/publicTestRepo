@@ -1,0 +1,1311 @@
+{
+  "routes": {
+    "dashboard": {
+      "title": "Übersicht"
+    },
+    "vouchers": {
+      "title": "Gutscheine",
+      "categories": {
+        "title": "Kategorien"
+      }
+    },
+    "orders": {
+      "title": "Bestellungen"
+    },
+    "widgets": {
+      "navTitle": "Widgets & Vorlagen",
+      "title": "Widgets",
+      "templates": {
+        "title": "Gutscheinvorlagen"
+      }
+    },
+    "settings": {
+      "title": "Einstellungen",
+      "general": "Allgemein",
+      "texts": "Texte",
+      "paymentTypes": "Zahlungsmethoden",
+      "shippingPackage": "Geschenks- & Versandoptionen",
+      "legal": "Rechtliches"
+    }
+  },
+  "dashboard": {
+    "title": "Übersicht",
+    "description": "Die folgenden Kennzahlen geben einen Überblick über Anzahl und Betrag der Gutscheinbestellungen des laufenden Jahres.",
+    "periodSelection": {
+      "label": "Betrachtungszeitraum",
+      "last_12_months": "Letzte 12 Monate"
+    },
+    "keyIndicators": {
+      "amountSumMonthly": {
+        "name": "Kaufbetrag im {month} {year}",
+        "description": "Kaufbetrag (Umsatz) Gutscheinbestellungen im aktuellen Monat (inklusive Geschenks- & Versandoptionen)"
+      },
+      "amountSumYearly": {
+        "name": "Kaufbetrag in {period, select, last_12_months{den letzten 12 Monaten} other {{year}}}",
+        "description": "Kaufbetrag (Umsatz) Gutscheinbestellungen (inklusive Geschenks- & Versandoptionen)"
+      },
+      "ordersCountMonthly": {
+        "name": "Bestellungen im {month} {year}",
+        "description": "Anzahl Gutscheinbestellungen im aktuellen Monat (exklusive Storno und Incentive-Gutschein)"
+      },
+      "ordersCountYearly": {
+        "name": "Bestellungen in {period, select, last_12_months{den letzten 12 Monaten} other {{year}}}",
+        "description": "Anzahl Gutscheinbestellungen (exklusive Storno und Incentive-Gutschein)"
+      }
+    },
+    "lastOrders": {
+      "title": "Letzte Bestellungen",
+      "description": "Die Tabelle zeigt die letzten 10 Bestellungen, die eingegangen sind oder bei denen sich der Status geändert hat.",
+      "popover": "Bestellung anzeigen",
+      "filter": {
+        "label": "Filter",
+        "empty": "Ihre Filterung ergab keine Treffer"
+      },
+      "columns": {
+        "name": "Name",
+        "identifier": "Bestellnummer",
+        "voucher": "Gutschein",
+        "orderedAt": "Bestelldatum",
+        "state": "Status"
+      }
+    },
+    "charts": {
+      "ordersChart": {
+        "title": "Bestellungen",
+        "description": "Das Diagramm zeigt die Anzahl aller bestellten, bezahlten sowie eingelösten Gutscheine {year, select, last_12_months{der letzten 12 Monate} other {in {year}}}."
+      },
+      "orderedAmountChart": {
+        "title": "Beträge",
+        "description": "Das Diagramm zeigt die Gesamtbeträge aller bestellten, bezahlten sowie eingelösten Gutscheine {year, select, last_12_months{der letzten 12 Monate} other {in {year}}}."
+      },
+      "labels": {
+        "ordered": "Bestellt",
+        "paid": "Bezahlt",
+        "redeemed": "Eingelöst",
+        "ordered_amount": "Bestellter Betrag",
+        "paid_amount": "Bezahlter Betrag",
+        "redeemed_amount": "Eingelöster Betrag"
+      },
+      "comparison": {
+        "last_year": "zum Vorjahr"
+      }
+    },
+    "newOrderDialog": {
+      "paymentTypesError": "Sie müssen zuerst eine der folgenden Zahlungsarten aktivieren: \"Überweisung\" oder \"Zahlung vor Ort\"",
+      "title": "Neue Gutscheinbestellung",
+      "orderVoucher": "Gutschein bestellen",
+      "validationErrorDialog": {
+        "title": "Formular nicht vollständig",
+        "description": "Bitte befüllen Sie alle Pflichtfelder."
+      },
+      "unexpectedErrorDialog": {
+        "title": "Unerwarteter Fehler",
+        "description": "Es ist ein unerwarteter Fehler aufgetreten. Bitte versuchen Sie es etwas später erneut."
+      },
+      "dynamicVoucherDialog": {
+        "title": "Gutschein erstellen",
+        "properties": {
+          "validityPeriod": "Gültigkeit *",
+          "validityPeriodCustomDate": "Benutzerdefiniertes Gültigkeitsdatum *",
+          "amount": "Wert *",
+          "name": "Name *",
+          "services": "Konditionen / Leistungen *"
+        }
+      },
+      "voucherSelectDialog": {
+        "title": "Gutschein wählen",
+        "category": "Gutschein Kategorie",
+        "emptyCategory": "Für diese Kategorie gibt es noch keine öffentlichen Gutscheine.",
+        "empty": "In dieser Sprache gibt es noch keine öffentlichen Gutscheine.",
+        "noVouchersError": "Sie haben noch keine öffentlichen Gutscheine erstellt.",
+        "amountWithDiscount": " -- {discount} <span class='red line-through'>{amount}</span> ",
+        "amountWithoutDiscount": " -- {amount}",
+        "amountWithIncentive": "-- Kostenlos <span class='red line-through'>{amount}</span> "
+      },
+      "orderElementVoucher": {
+        "label": "Gutschein *",
+        "actionLabel": "Gutschein wählen",
+        "voucherAmount": "Gutscheinwert",
+        "validUntil": "Gültig bis",
+        "validity": "Gültigkeit",
+        "discountedPrice": "Rabattierter Preis"
+      },
+      "orderTotalAmount": {
+        "label": "Summe"
+      },
+      "roomSelectDialog": {
+        "label": "Zimmer *",
+        "actionLabel": "Zimmer wählen",
+        "fixedPersonCount": "Der Gutschein ist auf eine fixe Anzahl an Personen beschränkt.",
+        "roomTypes": {
+          "single": "Einzelzimmer",
+          "double": "Doppelzimmer",
+          "suite": "Suite",
+          "apartment": "Appartement",
+          "chalet": "Chalet",
+          "family": "Familienzimmer",
+          "juniorSuite": "Junior Suite"
+        },
+        "selectAction": "Zimmer auswählen"
+      },
+      "treatmentSelectDialog": {
+        "label": "Behandlung *",
+        "actionLabel": "Behandlung hinzufügen",
+        "errorMessage": "Bitte wählen Sie mindestens eine Behandlung aus",
+        "minutes": "{count, plural, =1 {1 Minute} other {# Minuten}}",
+        "selectAction": "Behandlungen auswählen"
+      },
+      "productSelectDialog": {
+        "label": "Produkt *",
+        "actionLabel": "Produkt hinzufügen",
+        "errorMessage": "Bitte wählen Sie mindestens ein Produckt aus",
+        "minutes": "{count, plural, =1 {1 Minute} other {# Minuten}}",
+        "selectAction": "Produkte auswählen"
+      },
+      "order": {
+        "labels": {
+          "language": "Sprache",
+          "title": "Anrede",
+          "text": "Grußbotschaft",
+          "paymentType": "Zahlungsart",
+          "layout": "Layout",
+          "note": "Notiz",
+          "customer": "Kontaktinformationen",
+          "value": "Gutscheinwert",
+          "preview": "Vorschau",
+          "gift": "Incentive-Gutschein"
+        },
+        "placeholders": {
+          "title": "Lieber Max",
+          "paymentType": "Zahlungsart wählen",
+          "note": "Allergie gegen Milchprodukte"
+        },
+        "actionLabels": {
+          "orderVoucher": "Gutschein bestellen",
+          "language": "Sprache wählen",
+          "title": "Anrede hinzufügen",
+          "text": "Grußbotschaft hinzufügen",
+          "paymentType": "Zahlungsart wählen",
+          "layout": "Layout wählen",
+          "note": "Notiz hinzufügen",
+          "customer": "Kontaktinformationen hinzufügen",
+          "value": "Wert hinzufügen",
+          "preview": "Vorschau anzeigen"
+        },
+        "help": {
+          "gift": "Wenn diese Option aktiv ist, wird der Gutschein als Geschenk versendet. Der Gutschein wird sofort an die unter \"Kontaktinformationen\" angegebene E-Mail-Adresse versendet."
+        }
+      },
+      "multimedia": {
+        "imageWarning": "Es können nur Bilder ausgewählt werden."
+      }
+    }
+  },
+  "vouchers": {
+    "title": "Gutscheine",
+    "description": "Erstellen und veröffentlichen Sie hier Ihre Gutscheine unter Verwendung der diversen Gutscheintypen. Die Verwendung <i>mehrerer</i> Kategorien ist optional und erleichtert gegebenenfalls die Übersicht.",
+    "empty": "Es gibt noch keine Gutscheine.<br/>Klicken Sie auf den untenstehenden Button, um einen Gutschein zu erstellen.",
+    "noMatch": "Ihre Filterung ergab keine Treffer.",
+    "searchPlaceholder": "Suchen Sie z.B. Leistungsgutschein",
+    "types": {
+      "value": "Wertgutschein",
+      "service": "Leistungsgutschein",
+      "treatment": "Behandlungsgutschein",
+      "product": "Produktgutschein",
+      "stay": "Übernachtungsgutschein",
+      "dynamic": "Benutzerdefiniert",
+      "gift": "Incentive-Gutschein"
+    },
+    "voucher": {
+      "discount": "{amount, number, EUR} <span class='red'>&nbsp;-{percentage}%<span>",
+      "free": "Kostenlos",
+      "properties": {
+        "name": "Titel",
+        "type": "Gutscheintyp",
+        "price": "Preis",
+        "discountedPrice": "Rabattierter Preis",
+        "description": "Beschreibung",
+        "services": "Leistungen",
+        "amount": "Preis",
+        "images": "Bilder",
+        "category": "Kategorie",
+        "language": "Sprache",
+        "validityPeriod": "Gültigkeit",
+        "voucherValue": "Gutscheinwert",
+        "minAmount": "Minimaler Wert",
+        "maxAmount": "Maximaler Wert",
+        "treatmentCategories": "Behandlungskategorien",
+        "productCategories": "Produktkategorien",
+        "roomTypes": "Zimmertypen",
+        "personCount": "Personenanzahl",
+        "stays": "Übernachtungen",
+        "isLocked": "Freischaltcode anwenden",
+        "unlockCode": "Freischaltcode",
+        "isDiscounted": "Gutschein rabattieren",
+        "discountedAmount": "Rabattierter Preis",
+        "hasDiscountPeriod": "Rabatt zeitlich begrenzen",
+        "discountPeriodStart": "Beginn",
+        "discountPeriodEnd": "Ende",
+        "published": "öffentlich",
+        "unpublished": "nicht öffentlich",
+        "infoMessages": {
+          "name": "Der Titel wird auf den Gutschein gedruckt, der Einbau von \"Gutschein\" als Wort wird daher empfohlen",
+          "description": "Wird nicht auf den Gutschein gedruckt"
+        },
+        "warnings": {
+          "services": "Sie überschreiten die empfohlene, maximale Zeichenanzahl. Denken Sie daran, den Gutschein zu kontrollieren bevor Sie ihn veröffentlichen."
+        }
+      },
+      "sections": {
+        "general": "Allgemein",
+        "discount": {
+          "title": "Rabatt / Incentive",
+          "label": "Rabattierung",
+          "freeHelpText": "Hierbei handelt es sich um einen Gutschein, der kostenlos bestellt werden kann. Beachten Sie dabei, die Leistungen so zu beschreiben, dass ein mehrmaliges Einlösen des Gutscheins vermieden wird, falls dies gewünscht ist.",
+          "options": {
+            "noDiscount": "Keine Rabattierung",
+            "discounted": "Rabattierung",
+            "free": "Kostenlos / Als Incentive"
+          }
+        },
+        "unlockCode": {
+          "title": "Freischaltcode",
+          "description": "Wenn Sie den Freischaltcode aktivieren, wird dieser Gutschein auf Ihrer Internetseite ausgeblendet und erst angezeigt, sobald der dazugehörige Freischaltcode eingegeben wurde.",
+          "label": "Beachten Sie, dass der festgelegte Freischaltcode eindeutig sein muss.",
+          "infoMessage": "Vermeiden Sie ähnlich aussehende Zeichen, wie bspw. O und 0 oder l und 1.",
+          "generate": "Freischaltcode generieren"
+        }
+      },
+      "stay": {
+        "empty": "Für den Gutschein wurden noch keine öffentlichen Zimmer ausgewählt",
+        "invalidRoomTypesWarning": "Dieser Gutschein ist öffentlich, kann aber nicht verwendet werden, da kein Zimmer mit gültigem Preis in den gewählten Kategorien existieren. Erstellen Sie ein Zimmer mit gültigem Preis für diesen Gutschein.",
+        "editRoomTypes": "Zimmer bearbeiten",
+        "columns": {
+          "name": "Zimmer",
+          "occupancy": "Belegung",
+          "priceInformation": "Preisbezug",
+          "basePrice": "Basispreis"
+        },
+        "per_person": "Pro Person",
+        "per_room": "Pro Wohneinheit",
+        "showRoomType": "Zimmer anzeigen",
+        "v1WidgetWarning": "Sie nutzen aktuell die alte Version des Gutschein-Widgets. Das Feature \"Preisbezug (pro Person/Wohneinheit)\" ist nur in Verbindung mit dem neuen Widget möglich, welches von Ihrem Internetseitendienstleister eingebaut werden kann. Die notwendigen Codes finden Sie im Menüpunkt \"Widgets & Vorlagen\"."
+      },
+      "treatment": {
+        "treatments": "Behandlungen",
+        "empty": "Für den Gutschein wurden noch keine öffentlichen Behandlungen ausgewählt",
+        "invalidTreatmentsWarning": "Dieser Gutschein ist öffentlich, kann aber nicht verwendet werden, da keine Behandlungen mit gültigem Preis in den gewählten Kategorien existieren. Erstellen Sie eine Behandlung mit gültigem Preis für diesen Gutschein.",
+        "editTreatments": "Behandlungen bearbeiten",
+        "columns": {
+          "name": "Behandlung",
+          "duration": "Dauer",
+          "price": "Preis"
+        },
+        "minutes": "{count} Min.",
+        "showTreatment": "Behandlung anzeigen"
+      },
+      "product": {
+        "products": "Produkte",
+        "empty": "Für den Gutschein wurden noch keine öffentlichen Produkte ausgewählt",
+        "invalidProductsWarning": "Dieser Gutschein ist öffentlich, kann aber nicht verwendet werden, da keine Produkte mit gültigem Preis in den gewählten Kategorien existieren. Erstellen Sie ein Produkt mit gültigem Preis für diesen Gutschein.",
+        "editProducts": "Produkte bearbeiten",
+        "columns": {
+          "name": "Produkt",
+          "price": "Preis"
+        },
+        "showProduct": "Produkt anzeigen"
+      },
+      "publish": {
+        "description": "Gutschein veröffentlichen",
+        "date": "Der Gutschein ist zwischen {from} und {to} öffentlich",
+        "info": "Bitte fügen Sie dem Gutschein ein Bild hinzu, um ihn veröffentlichen zu können."
+      },
+      "personCount": "{count, plural, =null {Keine Angabe} other {#}}",
+      "rooms": "{count, plural,  =0 {Keine Zimmer ausgewählt} other {# Zimmer}}",
+      "stays": "{count, plural,  =0 {Keine Übernachtung} =1 {# Übernachtung} other {# Übernachtungen}}",
+      "treatmentCategoryCount": "{count, plural, =0 {Keine Behandlungskategorien ausgewählt}  =1 {Eine Behandlungskategorie ausgewählt} other {# Behandlungskategorien ausgewählt}}",
+      "numberOfTreatments": "{count, plural, =0 {Keine Behandlungen ausgewählt}  =1 {Eine Behandlung} other {# Behandlungen}}",
+      "productCategoryCount": "{count, plural, =0 {Keine Produktkategorien ausgewählt}  =1 {Eine Produktkategorie ausgewählt} other {# Produktkategorien ausgewählt}}",
+      "numberOfProducts": "{count, plural, =0 {Keine Produkte ausgewählt}  =1 {Ein Produkt} other {# Produkte}}",
+      "publicRooms": "Es können nur Zimmer ausgewählt werden, welche öffentlich sind und einen Basispreis besitzen.",
+      "deleteVoucher": {
+        "title": "Achtung!",
+        "description": "Der Gutschein wird dadurch unwiderruflich gelöscht und kann nicht mehr wiederhergestellt werden.<br/>Soll <span class=\"font-medium\">\"{name}\"</span> wirklich gelöscht werden?"
+      },
+      "bulkDeleteVouchers": {
+        "title": "Achtung!",
+        "description": "Die ausgewählten Gutscheine werden dadurch unwiderruflich gelöscht und können nicht mehr wiederhergestellt werden.<br/>Sollen die ausgewählten Gutscheine wirklich gelöscht werden?",
+        "action": "Alle löschen"
+      },
+      "multimedia": {
+        "imageWarning": "Es können nur Bilder mit einer Breite von mindestens 800px ausgewählt werden."
+      }
+    },
+    "category": {
+      "properties": {
+        "name": "Name",
+        "description": "Beschreibung",
+        "image": "Bild"
+      },
+      "voucherCount": "{count, plural, =1 {1 Gutschein} other {# Gutscheine}}",
+      "newCategory": "Neue Kategorie",
+      "deleteCategory": {
+        "title": "Achtung!",
+        "description": "Die Kategorie wird dadurch unwiderruflich gelöscht und kann nicht mehr wiederhergestellt werden.<br/>Soll <span class=\"font-medium\">\"{name}\"</span> wirklich gelöscht werden?"
+      },
+      "voucherCountError": "Diese Kategorie kann nicht gelöscht werden, da sie noch Gutscheine enthält."
+    },
+    "expirationFormats": {
+      "end_of_year": "Ende des Jahres",
+      "end_of_next_year": "Ende nächsten Jahres",
+      "one_year": "1 Jahr",
+      "two_years": "2 Jahre",
+      "indefinitely": "Unbegrenzt",
+      "custom": "Benutzerdefiniert"
+    },
+    "createDialog": {
+      "title": "Neuen Gutschein erstellen",
+      "valueDescription": "Der Käufer wählt selbst den Wert des Gutscheins",
+      "serviceDescription": "Definieren Sie Inklusivleistungen und einen fixen Preis für den Gutschein",
+      "treatmentDescription": "Wählen Sie Behandlungen aus, welche Sie als Gutscheine anbieten möchten",
+      "productDescription": "Wählen Sie Produkte aus, welche Sie als Gutscheine anbieten möchten",
+      "stayDescription": "Wählen Sie Zimmer aus, um Aufenthalte als Gutscheine anbieten zu können"
+    }
+  },
+  "widgets": {
+    "title": "Widgets",
+    "description": "Definieren Sie die Stile der Widgets und Gutscheinvorlagen. Anschließend können Sie den HTML-Code generieren, um die Widgets auf Ihrer Webseite einzubetten.",
+    "widget": {
+      "properties": {
+        "name": "Name",
+        "description": "Beschreibung"
+      }
+    },
+    "template": {
+      "layouts": {
+        "landscape": "Querformat",
+        "portrait": "Hochformat"
+      },
+      "types": {
+        "custom-slant": "{orgName}",
+        "custom-square": "{orgName}",
+        "slant": "Schräg",
+        "square": "Quadrat",
+        "simple": "Minimalistisch"
+      },
+      "isDefault": "Standard",
+      "actions": {
+        "setAsDefault": "Als Standard setzen"
+      },
+      "edit": {
+        "title": "Gutscheinvorlage konfigurieren"
+      },
+      "typography": {
+        "h1": {
+          "title": "Überschrift",
+          "description": ""
+        },
+        "h2": {
+          "title": "Überschrift",
+          "description": ""
+        },
+        "p": {
+          "title": "Grußbotschaft",
+          "description": ""
+        },
+        "label": {
+          "title": "Inklusivleistungen und Footer",
+          "description": ""
+        },
+        "small": {
+          "title": "Inklusivleistungen",
+          "description": ""
+        }
+      }
+    },
+    "create": {
+      "title": "Neues Widget erstellen"
+    },
+    "edit": {
+      "title": "Widget editieren"
+    },
+    "configurator": {
+      "title": "Widget-Konfiguration",
+      "general": {
+        "title": "Allgemein",
+        "categoryDescription": "Kategorienbeschreibung",
+        "borderRadius": "Abrundungen",
+        "boxShadow": "Schlagschatten",
+        "layout": "Layout",
+        "overlay": "Gutschein-Vorschau",
+        "tooltip": "Tooltips",
+        "template": "Gutscheinvorlage",
+        "settings": "Widget-Konfiguration",
+        "placeholderContent": "Platzhalterinhalte",
+        "ownContent": "Eigene Inhalte",
+        "toggleAdvanced": "Weitere Optionen {count, plural, =true {ausblenden} other {einblenden}}",
+        "zIndex": "z-index (CSS-Eigenschaft)",
+        "scrollOffset": "Scrollverhalten",
+        "scrollOffsetDesktop": "Scrollversatz Desktop",
+        "scrollOffsetMobile": "Scrollversatz Mobile",
+        "scrollOnInitToggle": "Scrollen bei Initialisierung"
+      },
+      "colors": {
+        "title": "Farben",
+        "stateColors": "Weitere Farbeinstellungen",
+        "main": "Hauptfarbe",
+        "accent": "Akzentfarbe",
+        "ambient": "Umgebungsfarbe",
+        "titleSuccess": "Überschrift bei erfolgreicher Bestellung",
+        "titleFailure": "Überschrift bei fehlerhafter Bestellung",
+        "error": "Fehlermeldung"
+      },
+      "typography": {
+        "title": "Typografie",
+        "fonts": "Schriften",
+        "fontFamilies": "Schriftfamilien",
+        "fontFamily": "Schriftfamilie",
+        "primary": "Primär",
+        "secondary": "Sekundär",
+        "defaultFont": "Standard",
+        "types": {
+          "customFonts": "Benutzerdefinierte Schriften",
+          "serif": "Serife Schriften",
+          "sansserif": "Serifenlose Schriften"
+        },
+        "properties": {
+          "h2": {
+            "title": "Überschriften",
+            "description": ""
+          },
+          "h3": {
+            "title": "Unterüberschriften",
+            "description": ""
+          },
+          "p": {
+            "title": "Text",
+            "description": ""
+          },
+          "small": {
+            "title": "Text (klein)",
+            "description": ""
+          },
+          "label": {
+            "title": "Labels",
+            "description": ""
+          },
+          "button": {
+            "title": "Buttons",
+            "description": ""
+          }
+        },
+        "fontSize": "Schriftgröße",
+        "lineHeight": "Zeilenhöhe",
+        "fontColor": "Schriftfarbe",
+        "fontOptions": {
+          "default": "Standard",
+          "serif": "Serif",
+          "sansserif": "Serifenlos"
+        }
+      },
+      "template": {
+        "typography": {
+          "properties": {
+            "h1": {
+              "title": "Überschrift",
+              "description": ""
+            },
+            "p": {
+              "title": "Grußbotschaft",
+              "description": ""
+            },
+            "label": {
+              "title": "Inklusivleistungen und Footer",
+              "description": ""
+            },
+            "small": {
+              "title": "Inklusivleistungen",
+              "description": ""
+            }
+          }
+        },
+        "helpTexts": {
+          "colors": {
+            "main": "Primäre Schriftfarbe der gesamten Vorlage.",
+            "accent": "Auszeichnungsfarbe für herausstehende Elemente.",
+            "ambient": "Hintergrundfarbe der Vorlage"
+          }
+        }
+      },
+      "tracking": {
+        "title": "Tracking",
+        "google": "Google Analytics",
+        "facebook": "Facebook Pixel"
+      },
+      "helpTexts": {
+        "general": {
+          "borderRadius": "Stärke der Abrundungen im Widget (CSS-Eigenschaft).",
+          "boxShadow": "Aussehen der Schlagschatten im Widget (CSS-Eigenschaft).",
+          "template": "Gutscheinvorlage, welche für dieses Widget verwendet werden soll.",
+          "templateDisabled": "Die Gutscheinvorlage kann nur verändert werden wenn die Option \"Eigene Inhalte\" aktiv ist.",
+          "overlay": "z-index (CSS-Eigenschaft) für die Gutschein-Vorschau.",
+          "tooltip": "z-index (CSS-Eigenschaft), welcher für alle Tooltips im Widget verwendet werden soll.",
+          "categoryDescription": "Soll die Kategorienansicht mit Beschreibungstext oder mit Hintergrundbild dargestellt werden?",
+          "scrollOffsetDesktop": "Scrollversatz (Offset) der für Scrolloperationen im Widget verwendet werden soll. Für Containerbreite >= 800px.",
+          "scrollOffsetMobile": "Scrollversatz (Offset) der für Scrolloperationen im Widget verwendet werden soll. Für Containerbreite < 800px.",
+          "scrollOnInitToggle": "Soll automatisch zur Gutschein-Vorschau gescrollt werden beim Laden der Seite?"
+        },
+        "colors": {
+          "main": "Primäre Schriftfarbe im gesamten Widget.",
+          "accent": "Auszeichnungsfarbe für Buttons und interaktive Elemente.",
+          "ambient": "Hintergrundfarbe der Umgebung, in der das Widget eingebunden wird.",
+          "titleSuccess": "Farbe der Überschrift, welche nach einer erfolgreichen Bestellung angezeigt wird.",
+          "titleFailure": "Farbe der Überschrift, welche nach einer fehlerhaften Bestellung angezeigt wird.",
+          "error": "Farbe der Fehlermeldungen."
+        },
+        "typography": {
+          "primary": "Schriftart der Überschriften",
+          "secondary": "Schriftart der Fließtexte",
+          "warning": "Benutzerdefinierte Schriftfamilien werden nicht in der Vorschau angezeigt."
+        },
+        "tracking": {
+          "description": "Falls Sie die Tracking-Events mittels \"Data Layer\" im Google Tag Manager verarbeiten, können Sie die einzelnen Plattform-Einstellungen deaktivieren. Die Werte werden im benutzerdefinierten Event \"AdditiveApps\" bereitgestellt."
+        }
+      }
+    },
+    "planUpgrade": {
+      "message": "Sie haben die maximale Anzahl zulässiger Widgets erreicht.<br/>Upgraden Sie Ihre Gutschein-App-Lizenz auf <i>Professional</i>, um weitere Widgets anlegen zu können."
+    },
+    "v1": {
+      "badge": "Keine Konfiguration möglich",
+      "title": "Sie besitzen eine alte Version des Widgets",
+      "message": "Sie besitzen eine veraltete Version des Widgets, welche die erweiterte Konfiguration leider nicht unterstützt."
+    },
+    "deleteDialog": {
+      "title": "Widget wirklich löschen?",
+      "message": "Soll das Widget wirklich gelöscht werden?<br>Diese Aktion kann nicht wieder rückgängig gemacht werden. Falls dieses Widget in einer Webseite eingebaut wurde, wird es dort nicht mehr funktionieren."
+    }
+  },
+  "orders": {
+    "title": "Bestellungen",
+    "description": "Hier werden die Bestellungen chronologisch absteigend aufgelistet.",
+    "searchPlaceholder": "Suchen Sie nach Bestellnummer, Namen",
+    "order": {
+      "state": {
+        "title": "Bestellstatus",
+        "all": "Alle",
+        "canceled": "Storniert",
+        "expired": "Verfallen",
+        "redeemed": "Eingelöst",
+        "partial_redeemed": "Teilseingelöst",
+        "paid": "Bezahlt",
+        "ordered": "Bestellt",
+        "issued": "Ausgestellt",
+        "gift": "Incentive"
+      },
+      "type": {
+        "title": "Gutscheintyp",
+        "service": "Leistungsgutscheine",
+        "value": "Wertgutscheine",
+        "product": "Produktgutscheine",
+        "treatment": "Behandlungsgutscheine",
+        "stay": "Übernachtungsgutscheine",
+        "gift": "Incentive-Gutscheine"
+      },
+      "layouts": {
+        "landscape": "Querformat",
+        "portrait": "Hochformat"
+      },
+      "redeemDialog": {
+        "title": "Gutschein einlösen",
+        "redeemCode": {
+          "label": "Gutscheincode *",
+          "placeholder": "Gutscheincode"
+        },
+        "infoMessage": "Beachten Sie die Groß- und Kleinschreibung",
+        "redeemPartially": "Teilweise einlösen",
+        "amount": {
+          "label": "Betrag *"
+        },
+        "comment": {
+          "label": "Kommentar",
+          "placeholder": "Fügen Sie der Aktion einen Kommentar bei."
+        },
+        "action": "Jetzt einlösen"
+      },
+      "paymentDialog": {
+        "title": "Gutschein als bezahlt markieren",
+        "label": "Zahlungsmethode",
+        "placeholder": "Wählen Sie eine Zahlungsmethode aus",
+        "action": "Als bezahlt markieren",
+        "paymentNotSupported": "Die von Ihnen angegebene Zahlungsmethode wird nicht unterstützt."
+      },
+      "expirationDialog": {
+        "title": "Gültigkeit verlängern",
+        "label": "Verfallsdatum",
+        "placeholder": "Wählen Sie eine Zahlungsmethode aus",
+        "action": "verlängern",
+        "paymentNotSupported": "Die von Ihnen angegebene Zahlungsmethode wird nicht unterstützt."
+      },
+      "issuedDialog": {
+        "title": "ACHTUNG",
+        "message": "Der Gutschein wurde noch nicht bezahlt.<br>Wirklich fortfahren und den Gutschein ohne vorherige Bezahlung generieren?",
+        "action": "Gutschein generieren"
+      },
+      "detailNavbar": {
+        "orderedAt": "Eingegangen am",
+        "dialogTitle": "Notiz für diese Bestellung hinterlegen",
+        "note": "Notiz",
+        "noNote": "Keine Notiz vorhanden",
+        "history": {
+          "transaction": {
+            "true": "Bezahlung durch {paymentType} war erfolgreich",
+            "false": "Bezahlung durch {paymentType} ist fehlgeschlagen",
+            "bankTransfer": "Gutschein wird mit Überweisung bezahlt",
+            "canceled": "Am {date}, um {time} Uhr rückgängig gemacht"
+          },
+          "state": {
+            "ordered": "Gutschein wurde bestellt",
+            "paid": "Gutschein wurde bezahlt",
+            "issued": "Gutschein wurde ausgestellt",
+            "redeemed": "Gutschein wurde {redeemedBy, select, hgv { über HGV-Buchungswidget eingelöst} asa { über ASA HOTEL eingelöst } other {eingelöst}}",
+            "minutes": "{count, plural, =1 {1 Minute} other {# Minuten}}",
+            "partial_redeemed": "{amount, number, EUR} {amount, plural, =1 {wurde} other {wurden}} {redeemedBy, select, hgv { über HGV-Buchungswidget eingelöst} asa { über ASA HOTEL eingelöst } other {eingelöst}}",
+            "canceled": "Gutschein wurde storniert",
+            "expired": "Gutschein ist verfallen",
+            "gift": "Incentive-Gutschein wurde versandt"
+          }
+        }
+      },
+      "actions": {
+        "paid": "Als bezahlt markieren",
+        "downloadAsPDF": "PDF herunterladen",
+        "remind_payment": "An Zahlung erinnern",
+        "confirm_order": "Bestätigung erneut senden",
+        "confirm_payment": "Gutschein erneut senden",
+        "extendExpiration": "Gutschein verlängern",
+        "redeemVoucher": "Gutschein einlösen",
+        "issued": "Gutschein generieren",
+        "canceled": "Stornieren"
+      }
+    },
+    "customer": {
+      "title": "Kontaktinformationen",
+      "email": "E-Mail-Adresse",
+      "telephone": "Telefon",
+      "buyer": "Käufer",
+      "address": "Adresse",
+      "shipping": {
+        "title": "Versand- und Geschenkoptionen",
+        "name": "Versandoption",
+        "address": "Versandadresse"
+      },
+      "company": {
+        "name": "Unternehmen",
+        "vatId": "Umsatzsteuer-ID",
+        "companyRecipientCode": "Empfängerkodex"
+      },
+      "gift": "Geschenkoption"
+    },
+    "voucher": {
+      "activationCode": "Freischaltcode",
+      "amountToPay": "Kaufbetrag",
+      "amount": "Gutscheinwert",
+      "amountLeft": "Restbetrag",
+      "expiresAt": "Verfällt am",
+      "paymentType": "Bezahlart",
+      "type": "Gutscheintyp",
+      "validity": "Gültigkeit",
+      "language": "Sprache",
+      "redeemCode": "Gutscheincode",
+      "room": {
+        "amount": "Zimmerpreis",
+        "name": "Zimmer",
+        "nights": "Anzahl Nächte",
+        "persons": "Personen"
+      },
+      "treatment": {
+        "count": "Anzahl",
+        "name": "Behandlung",
+        "duration": "Dauer",
+        "price": "Preis",
+        "minutes": "{count, plural, =1 {1 Minute} other {# Minuten}}"
+      },
+      "product": {
+        "count": "Anzahl",
+        "name": "Produkt",
+        "price": "Preis"
+      }
+    },
+    "export": {
+      "title": "Download wird vorbereitet",
+      "content": "Der Download der Bestellungen wird vorbereitet.<br/>Die CSV-Datei mit der Bestellungsliste wird in Kürze an die E-Mail-Adresse <b>{email}</b> gesendet."
+    },
+    "cancelOrder": {
+      "title": "Achtung!",
+      "description": "Die Bestellung wird dadurch unwiderruflich storniert, diese Aktion kann nicht rückgängig gemacht werden.<br>Soll <span class=\"font-medium\">\"{name}\"</span> wirklich storniert werden?",
+      "action": "Stornieren"
+    },
+    "deleteOrder": {
+      "title": "Achtung!",
+      "description": "Die Bestellung und alle dazugehörigen Daten werden dadurch unwiderruflich gelöscht und können nicht mehr wiederhergestellt werden.<br>Soll <span class=\"font-medium\">\"{name}\"</span> wirklich gelöscht werden?"
+    }
+  },
+  "settings": {
+    "title": "Einstellungen",
+    "general": {
+      "title": "Allgemein",
+      "contactInfo": "Kontaktinformationen",
+      "inheritanceDescription": "Wenn dieses Symbol aktiviert (blau) ist, werden Daten oder Inhalte mit jenen Ihrer Organisation (Account) synchronisiert. Dadurch können Sie die Daten zentral in Ihrer Organisation für alle Apps verwalten.",
+      "organizationName": {
+        "label": "Organisationsname",
+        "modalTitle": "Organisationsname",
+        "input": {
+          "label": "Organisationsname"
+        }
+      },
+      "email": {
+        "label": "E-Mail-Adresse",
+        "modalTitle": "E-Mail-Adresse",
+        "input": {
+          "label": "E-Mail-Adresse",
+          "message": "Diese E-Mail-Adresse erhält alle Bestätigungsmails"
+        }
+      },
+      "telephone": {
+        "label": "Telefonnummer",
+        "modalTitle": "Telefonnummer",
+        "input": {
+          "label": "Telefonnummer"
+        }
+      },
+      "address": {
+        "label": "Adresse",
+        "modalTitle": "Adresse für den Gutschein",
+        "input": {
+          "label": "Adresse",
+          "message": "Adresse wird im Fußbereich des Gutscheins aufgedruckt."
+        }
+      },
+      "website": {
+        "label": "Webseite",
+        "modalTitle": "Webseite",
+        "input": {
+          "label": "Webseite"
+        }
+      },
+      "integration": {
+        "asa": {
+          "title": "ASA Verbindung",
+          "error": {
+            "title": "ASA Verbindung herstellen",
+            "description": "Um mit der Einrichtung fortzufahren, muss eine gültige E-Mail-Adresse für die Organisation angegeben werden."
+          },
+          "enable": {
+            "title": "ASA Verbindung herstellen",
+            "description": "Nach erfolgreicher Einrichtung, werden zukünftig Ihre Gutschein-Bestellungen zwischen ASA und ADDITIVE+ GUTSCHEINE synchronisiert.",
+            "action": "Verbindung einrichten"
+          },
+          "disable": {
+            "title": "ASA Verbindung trennen",
+            "description": "Achtung!</br>Wenn Sie fortfahren wird die Synchronisation zwischen ASA und ADDITIVE+ GUTSCHEINE deaktiviert.</br>Die Verbindung kann jederzeit wieder aktiviert werden.",
+            "action": "Verbindung trennen"
+          },
+          "upgradeForFeature": "Upgraden Sie auf \"Professional\", um die Synchronisation mit ASA freizuschalten.",
+          "infoDialog": {
+            "title": "Was ist die ASA Verbindung?",
+            "description": "Durch die Echtzeit-Synchronisation zwischen ADDITIVE+ GUTSCHEINE und ASA HOTEL werden Gutscheine, die über die Hotelsoftware eingelöst oder bezahlt werden, direkt in die App übertragen und umgekehrt.</br></br>Weiters ist das Einlösen bzw. Teileinlösen von Gutscheinen mit und ohne Reservierung als auch die Übertragung von Gutscheinbeträgen auf Rechnungen möglich."
+          }
+        },
+        "hgv": {
+          "title": "HGV-Buchungswidget Verbindung",
+          "error": {
+            "title": "HGV-Buchungswidget Verbindung herstellen",
+            "description": "Um mit der Einrichtung fortzufahren, muss eine gültige E-Mail-Adresse für die Organisation angegeben werden."
+          },
+          "enable": {
+            "title": "HGV-Buchungswidget Verbindung herstellen",
+            "description": "Nach erfolgreicher Einrichtung, können ADDITIVE+ GUTSCHEINE im HGV-Buchungswidget bei einer Buchung eingelöst werden.",
+            "action": "Verbindung einrichten"
+          },
+          "disable": {
+            "title": "HGV-Buchungswidget Verbindung trennen",
+            "description": "Achtung!</br>Wenn Sie fortfahren wird die Synchronisation zwischen HGV-Buchungswidget und ADDITIVE+ GUTSCHEINE deaktiviert.</br>Die Verbindung kann jederzeit wieder aktiviert werden.",
+            "action": "Verbindung trennen"
+          },
+          "upgradeForFeature": "Upgraden Sie auf \"Professional\", um die Synchronisation mit HGV-Buchungswidget freizuschalten.",
+          "infoDialog": {
+            "title": "Was ist die HGV-Buchungswidget Verbindung?",
+            "description": "Durch die Echtzeit-Synchronisation zwischen ADDITIVE+ GUTSCHEINE und HGV-Buchungswidget werden Gutscheine, die über das HGV-Buchungswidget eingelöst werden, direkt in die App übertragen."
+          }
+        }
+      }
+    },
+    "texts": {
+      "title": "Texte",
+      "customInfo": "Benutzerdefinierte Informationen",
+      "emailValediction": {
+        "label": "Signatur",
+        "modalTitle": "Signatur",
+        "input": {
+          "label": "Signatur"
+        }
+      },
+      "voucherGreeting": {
+        "label": "Vordefinierte Grußbotschaft",
+        "modalTitle": "Vordefinierte Grußbotschaft",
+        "input": {
+          "label": "Grußbotschaft auf Gutschein",
+          "message": "Vorgeschlagener Beispielgrußtext des Schenkenden an den Beschenkten."
+        }
+      },
+      "voucherIntro": {
+        "label": "Einleitungstext",
+        "modalTitle": "Einleitungstext",
+        "input": {
+          "label": "Einleitungstext",
+          "message": "Einleitender Text oberhalb der Kategorien- und Gutscheineansicht"
+        }
+      },
+      "voucherTermsOfUse": {
+        "label": "Kurze AGBs",
+        "modalTitle": "Kurze AGBs",
+        "input": {
+          "label": "Infotext auf Gutschein",
+          "message": "Fixer Infotext, welcher im Fußbereich aller Gutscheine aufgedruckt wird."
+        }
+      }
+    },
+    "paymentTypes": {
+      "title": "Zahlungsmethoden",
+      "add": "Bezahlmethode hinzufügen",
+      "empty": "Es wurden noch keine Zahlungsmethoden konfiguriert.<br/>Klicken Sie auf den unten stehenden Button, um eine Zahlungsmethode hinzuzufügen.",
+      "openGuide": "Leitfaden öffnen",
+      "bank_transfer": {
+        "iban": "IBAN",
+        "bankName": "Name der Bank"
+      },
+      "concardis": {
+        "intro": "Geben Sie hier die Merchant ID und den API Schlüssel Ihres Concardis-Kontos ein, um Concardis als Zahlungsmethode anzubieten.",
+        "merchantId": "Merchant ID",
+        "apiKey": "API Schlüssel"
+      },
+      "paypal": {
+        "intro": "Geben Sie hier Benutzername, Passwort und Signatur Ihres PayPal-Business-Kontos ein, um PayPal als Zahlungsmethode anzubieten.",
+        "username": "Benutzername",
+        "password": "Passwort",
+        "signature": "Signature"
+      },
+      "oppwa": {
+        "intro": "Geben Sie hier Ihre hobex-Zugangsdaten ein, um hobex als Zahlungsmethode anzubieten.",
+        "token": "Access Token",
+        "entityId": "Entity ID"
+      },
+      "gastro_pool": {
+        "intro": "Geben Sie hier Ihren gastro-pool-Key ein, um gastro-pool als Zahlungsmethode anzubieten.",
+        "key": "Key"
+      },
+      "hogast": {
+        "intro": "Geben Sie hier Ihren hogast-Key ein, um hogast als Zahlungsmethode anzubieten.",
+        "key": "Key"
+      },
+      "six_payments": {
+        "intro": "Geben Sie hier API Benutzername und Passwort, sowie Kunden ID und Terminal ID Ihres SIX Payment Services-Kontos ein, um SIX Payment Services als Zahlungsmethode anzubieten.",
+        "customerId": "Kunden ID",
+        "terminalId": "Terminal ID",
+        "apiUser": "API Benutzername",
+        "apiPassword": "API Passwort"
+      },
+      "vpos": {
+        "intro": "Geben Sie hier Ihre Virtual-POS-ID ein, um Virtual-POS als Zahlungsmethode anzubieten.",
+        "id": "ID"
+      },
+      "stripe": {
+        "intro": "Geben Sie hier Ihren Publishable- und Secret Key ein, um Stripe als Zahlungsmethode anzubieten.",
+        "secretKey": "Secret Key",
+        "publishableKey": "Publishable Key"
+      },
+      "klarna": {
+        "intro": "Geben Sie hier API Benutzername und Passwort an, um Klarna als Zahlungsmethode anzubieten.",
+        "username": "API Benutzername (UID)",
+        "password": "API Password"
+      },
+      "deleteDialog": {
+        "title": "Achtung!",
+        "description": "Sie sind dabei \"{paymentType}\" als Zahlungsmethode zu löschen. Wollen Sie wirklich forfahren?"
+      },
+      "errors": {
+        "allAdded": "Sie können keine weiteren Zahlungsmodalitäten hinzufügen.",
+        "planRestrictions": {
+          "plan_allowed_payment_types_exceeded": {
+            "title": "Achtung!",
+            "description": "Mit Ihrer \"Professional\"-Lizenz können Sie zusätzlich zu \"PayPal\" und \"Banküberweisung\" maximal eine weitere Zahlungsmethode aktivieren."
+          },
+          "starter_not_allowed_payment_type": {
+            "title": "Achtung!",
+            "description": "Mit Ihrer \"Starter\"-Lizenz können Sie nur \"Überweisung\" und/oder \"PayPal\" aktivieren."
+          }
+        },
+        "countryCurrency": {
+          "title": "Achtung!",
+          "description": "Dieser Zahlungsanbieter unterstützt die ausgewählte Währung nicht in Ihrem Land."
+        }
+      }
+    },
+    "legal": {
+      "title": "Rechtliches",
+      "description": "Hier können Sie Links zu den rechtlichen Texten auf Ihrer Webseiten einfügen. Diese Links werden im Gutschein-Widget verwendet.",
+      "termsLink": {
+        "label": "Nutzungsbedingungen",
+        "modalTitle": "Nutzungsbedingungen",
+        "input": {
+          "label": "Link",
+          "message": "Der Link verweist auf Ihre Nutzungsbedingungen"
+        }
+      },
+      "privacyLink": {
+        "label": "Datenschutzlink",
+        "modalTitle": "Datenschutzlink",
+        "input": {
+          "label": "Link",
+          "message": "Der Link verweist auf Ihre Datenschutzbestimmungen"
+        }
+      },
+      "disclaimerLink": {
+        "label": "Haftungsausschluss",
+        "modalTitle": "Haftungsausschluss",
+        "input": {
+          "label": "Link",
+          "message": "Der Link verweist auf Ihren Haftungsausschluss"
+        }
+      }
+    },
+    "shipping": {
+      "title": "Versandoptionen",
+      "options": {
+        "package": "Geschenksoption",
+        "shipping": "Versandoption"
+      },
+      "errors": {
+        "accessRights": {
+          "message": "Sie haben nicht die nötigen Zugriffsberechtigungen, um diese Aktion auszuführen"
+        },
+        "uniqueCountries": {
+          "title": "Land öfters verwendet!",
+          "description": "Jedes Land darf nur ein mal pro Versandoption vorkommen"
+        },
+        "defaultEdit": {
+          "title": "Fehler!",
+          "description": "Diese Versandoption kann nicht verändert werden"
+        }
+      },
+      "emptyPackages": "Sie haben noch keine Geschenkoptionen erstellt.<br> Diese können Sie per Klick auf den \"+\"-Button erstellen.",
+      "upgradeForFeature": "<span class='blue'>Upgraden</span> Sie auf \"Professional\", um Geschenk- und Versandoptionen anlegen zu können."
+    }
+  },
+  "global": {
+    "error": "Fehler",
+    "all": "Alle",
+    "actions": {
+      "activate": "Aktivieren",
+      "deactivate": "Deaktivieren",
+      "persist": "Übernehmen",
+      "delete": "Löschen",
+      "download": "Herunterladen",
+      "edit": "Bearbeiten",
+      "logout": "Abmelden",
+      "rename": "Umbenennen",
+      "save": "Speichern",
+      "select": "Auswählen",
+      "addImage": "Bild hinzufügen",
+      "show": "Anzeigen",
+      "retry": "Erneut versuchen",
+      "preview": "Vorschau",
+      "help": "Hilfe",
+      "publish": "Veröffentlichen",
+      "code": "Code"
+    },
+    "paymentTypes": {
+      "bank_transfer": "Überweisung",
+      "cash": "Zahlung vor Ort",
+      "concardis": "Concardis",
+      "hobex": "hobex",
+      "hogast": "hogast",
+      "oppwa": "hobex",
+      "gastro_pool": "gastro-pool",
+      "vpos": "Virtual-POS",
+      "paypal": "PayPal",
+      "six_payments": "SIX Payment Services",
+      "stripe": "Stripe",
+      "klarna": "Klarna",
+      "online": "Zahlung über Website",
+      "outstanding": "Zahlung ausständig"
+    },
+    "discardChanges": {
+      "title": "Achtung!",
+      "description": "Sollen ungespeicherte Änderungen verworfen werden?",
+      "action": "Verwerfen"
+    },
+    "deleteCategory": {
+      "title": "Achtung!",
+      "description": "Die Kategorie wird dadurch unwiderruflich gelöscht und kann nicht mehr wiederhergestellt werden.<br/>Soll <b>{name}</b> wirklich gelöscht werden?"
+    },
+    "delete": {
+      "title": "Achtung!",
+      "description": "Das Element wird dadurch unwiderruflich gelöscht und kann nicht mehr wiederhergestellt werden.<br/>Soll <b>\"{name}\"</b> wirklich gelöscht werden?"
+    },
+    "deleteWidget": {
+      "title": "Achtung!",
+      "description": "Das Widget wird dadurch unwiderruflich gelöscht und kann nicht mehr wiederhergestellt werden. Falls das Widget noch auf Ihrer Webseite eingebunden ist wird es nicht mehr funktionieren."
+    },
+    "multimedia": {
+      "imageWarning": "Es können nur Bilder ausgewählt werden."
+    },
+    "errors": {
+      "public_voucher_left": {
+        "title": "Achtung!",
+        "message": "Diese Kategorie kann nicht gelöscht werden, da sie öffentliche Gutscheine enthält."
+      },
+      "publish": {
+        "category_id": {
+          "missing_translation": "Es fehlt die entsprechende Übersetzung für diese Kategorie."
+        },
+        "services": {
+          "validation.string": "Es fehlt die Leistungsbeschreibung in dieser Sprache.",
+          "validation.required": "Es fehlt die Leistungsbeschreibung in dieser Sprache."
+        },
+        "has_discount_period": {
+          "false_if_not_discounted": "Rabattierungszeitraum darf nicht gesetzt sein ohne aktivierter Rabattierung."
+        },
+        "discounted_amount": {
+          "validation.absent_if": "Rabattierter Preis darf nicht gesetzt sein ohne aktivierter Rabattierung."
+        },
+        "treatment_categories": {
+          "not_exists": "Eine oder mehrere Behandlungen existieren nicht in dieser Sprache."
+        },
+        "product_categories": {
+          "not_exists": "Ein oder mehrere Produkte existieren nicht in dieser Sprache."
+        },
+        "room_types": {
+          "not_exists": "Ein oder mehrere Zimmer existieren nicht in dieser Sprache."
+        }
+      }
+    }
+  },
+  "help": {
+    "vouchers": {
+      "sort": "Gutscheine mit einer hohen Sternebewertung werden im Widget als erstes aufgelistet.<br>Bei der selben Anzahl an Sternen wird jener Gutschein, welcher zuletzt bearbeitet wurde, als erstes angezeigt."
+    }
+  },
+  "errors": {
+    "amountFormat": "Ungültiges Format",
+    "date": "Wert ist kein gültiges Datum",
+    "discountedAmount": "Wert muss kleiner als der Gutscheinwert sein",
+    "discountPeriod": "Enddatum muss nach dem Startdatum liegen",
+    "email": "Wert ist keine gültige E-Mail-Adresse",
+    "invalidDateRange": "Ungültiger Zeitraum",
+    "maxLength": "Wert darf eine Länge von {maxLength} Zeichen nicht überschreiten",
+    "maxAmount": "Darf Gutscheinwert nicht unterschreiten",
+    "minAmount": "Darf Gutscheinwert nicht überschreiten",
+    "number": "Wert ist keine gültige Zahl",
+    "greaterZero": "Wert muss größer 0 sein",
+    "required": "Wert darf nicht leer sein",
+    "unlockCode": {
+      "format": "Es sind nur Großbuchstaben, Zahlen und Bindestriche \" - \" erlaubt",
+      "unique": "Dieser Freischaltcode ist bereits in Verwendung",
+      "length": "Freischaltcode muss zwischen {min} und {max} Zeichen lang sein",
+      "gift": "Beim Incentive-Gutschein muss dies aktiviert sein"
+    },
+    "between": "Muss zwischen {min} und {max} liegen",
+    "roomTypes": "Sie müssen mind. einen Zimmertyp auswählen",
+    "treatmentCategories": "Sie müssen mind. eine Behandlungskategorie auswählen",
+    "productCategories": "Sie müssen mind. eine Produktkategorie auswählen",
+    "invalidRedeemCode": "Ungültiger Gutscheincode",
+    "invalidWidgetName": "Der Widget Name enthält ein ungültiges Zeichen",
+    "mustStartWithLetter": "Der Widget Name muss mit einem Buchstaben beginnen",
+    "beforeDate": "Das Gültigkeitsdatum muss in der Zukunft liegen",
+    "images": "Es dürfen höchstens 10 Bilder hinzugefügt werden",
+    "desktopOnly": {
+      "title": "Achtung!",
+      "template": "Die Bearbeitung und die Personalisierung der Gutscheinvorlage ist auf mobilen Geräten nicht verfügbar.",
+      "widget": "Die Bearbeitung und die Personalisierung des Widgets ist auf mobilen Geräten nicht verfügbar."
+    }
+  },
+  "toast": {
+    "orderUpdated": {
+      "title": "Änderungen gespeichert",
+      "description": "Der Gutschein wird nun neu erstellt. Dies kann einen Augenblick dauern."
+    },
+    "success": "Aktion erfolgreich durchgeführt",
+    "required": "Wert darf nicht leer sein",
+    "bulkDelete": "{count, plural, =1 {Ein Element} other {# Elemente}} gelöscht",
+    "unexpectedError": "Ein unerwarteter Fehler ist aufgetreten"
+  },
+  "components": {
+    "content-info": {
+      "showMore": "Weitere Informationen einblenden",
+      "showLess": "Informationen ausblenden"
+    },
+    "sync-dialog": {
+      "asa": {
+        "title": "ASA Verbindung",
+        "description": "Bitte fügen Sie hier die E-Mail Ihres zuständigen ASA-Dienstleisters ein. Nach Klick auf “Anleitung senden” erhält dieser die notwendigen Zugangsdaten sowie die Anleitung für die Einrichtung der Synchronisierung."
+      },
+      "hgv": {
+        "title": "HGV-Buchungswidget Verbindung",
+        "description": "Bitte fügen Sie hier die E-Mail Ihres zuständigen Dienstleisters bei HGV-Buchungswidget ein. Nach Klick auf “Anleitung senden” erhält dieser die notwendigen Zugangsdaten sowie die Anleitung für die Einrichtung der Synchronisierung."
+      },
+      "descriptionAlreadySynced": "<b>Achtung!</b><br>Anleitung wurde bereits versendet. Beim wiederholten Senden der Anleitung wird ein neues Passwort generiert, welches dann für die Einrichtung verwendet werden muss (das vorher generierte Passwort funktioniert in diesem Fall nicht mehr).",
+      "actions": {
+        "sendEmail": "Anleitung senden"
+      },
+      "credentials": {
+        "email": "E-Mail"
+      }
+    },
+    "av-customer-form-modal": {
+      "title": "Kontaktdaten",
+      "otherData": "Sonstige Kontaktdaten",
+      "isCompany": "Als Unternehmen kaufen",
+      "properties": {
+        "email": "E-Mail-Adresse *",
+        "givenName": "Vorname *",
+        "familyName": "Nachname *",
+        "gender": "Geschlecht *",
+        "genders": {
+          "male": "Männlich",
+          "female": "Weiblich"
+        },
+        "telephone": "Telefon",
+        "streetAddress": "Straße",
+        "postalCode": "Postleitzahl",
+        "addressLocality": "Ort",
+        "addressCountry": "Land",
+        "noCountry": "Keine Angabe",
+        "companyName": "Unternehmensbezeichnung",
+        "vat": "MwSt.-Nr",
+        "companyRecipientCode": "Empfängerkodex"
+      }
+    },
+    "av-package-list": {
+      "title": "Geschenkoptionen"
+    },
+    "av-package-detail-modal": {
+      "title": "Geschenkoption",
+      "description": "Geschenkoptionen werden im Gutschein-Widget ausgegeben und können vom Käufer ausgewählt werden.",
+      "shipping": {
+        "title": "Versandoptionen",
+        "description": "Wählen Sie eine oder mehrere Versandoptionen aus, für die Sie diese Geschenkoption ermöglichen möchten."
+      },
+      "properties": {
+        "name": "Name",
+        "description": "Beschreibung",
+        "price": "Preis",
+        "shipping": "Versandoptionen"
+      },
+      "errors": {
+        "inactiveShipping": {
+          "title": "Achtung!",
+          "description": "{count, plural, =1 {Eine} other {#}} ausgewählte {count, plural, =1 {Versandoption} other {Versandoptionen}} ({inactiveShippings}) {count, plural, =1 {ist} other {sind}} nicht aktiviert oder {count, plural, =1 {existiert} other {existieren}} nicht."
+        }
+      }
+    },
+    "av-shipping-detail-modal": {
+      "title": "Versandoption",
+      "description": "Versandoptionen werden im Gutschein-Widget ausgegeben und können vom Käufer ausgewählt werden.",
+      "countryPrices": {
+        "title": "Länder & Preise",
+        "description": "Definieren Sie hier die Versandpreise für diese Versandoption pro Land",
+        "addPriceVariant": "Preisvariante hinzufügen"
+      },
+      "properties": {
+        "name": "Name",
+        "description": "Beschreibung",
+        "price": "Preis",
+        "shipping": "Versandoptionen",
+        "countries": "Länder"
+      }
+    },
+    "avWidgetV1Notification": {
+      "defaultText": "Sie nutzen aktuell die alte Version des Gutschein-Widgets. Das Feature 'Incentive-Gutschein' ist nur in Verbindung mit dem neuen Widget möglich, welches von Ihrem Internetseitendienstleister eingebaut werden kann. Die notwendigen Codes finden Sie im Menüpunkt 'Widgets & Templates'.",
+      "buttonText": "Zu den Widgets"
+    }
+  },
+  "onboarding": {
+    "1": {
+      "title": "Bereit neues Umsatzpotential auszuschöpfen?",
+      "description": "Geben Sie mit ADDITIVE+ GUTSCHEINE Ihren Kunden auf einfache Art und Weise noch mehr Möglichkeiten, Ihre Produkte und Leistungen zu kaufen und zu schenken."
+    },
+    "2": {
+      "title": "Automatischer Verkauf über Ihre Internetseite",
+      "description": "Eine gute Integration und Verlinkung des Gutscheinsystems in Ihrer Internetseite steigert die Sichtbarkeit und somit die Anzahl an Verkäufen."
+    },
+    "3": {
+      "title": "Vor-Ort-Verkauf",
+      "description": "Verkaufen Sie Gutscheine direkt an Ihrem „Point of Sale“ an der Rezeption, im Restaurant oder an der Kasse. Die Nutzung bestehender Vorlagen macht dabei die Abwicklung effizient und einfach."
+    },
+    "4": {
+      "title": "Marketingpotenzial nutzen",
+      "description": "Kostenlose oder rabattierte Gutscheine sowie individuelle Gutscheine für bestimmte Gäste- und Kundengruppen sind optimale Werkzeuge für gelungenes Marketing mit echter Verkaufsförderung."
+    },
+    "actions": {
+      "skip": "Überspringen",
+      "next": "Weiter",
+      "back": "Zurück",
+      "go": "Jetzt loslegen"
+    }
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "settings": {
+      "inheritedSettings": {
+        "question": "Was bedeutet das DNA-Symbol<img class=\"dib\" style=\"vertical-align: middle;\" width=\"19\" height=\"19\" src=\"/images/icons/dna.svg\"/>?",
+        "answer": "Bestimmte Einstellungen können von der Account-App \"geerbt\" werden, wie z.B. die E-Mail-Adresse oder die Telefonnummer. Wenn das DNA-Symbol aktiviert ist, wird die Vererbung aktiviert und automatisch der Wert von der Account-App verwendet. Sollten Sie jedoch bei einem bestimmten Feld für die Gutschein-App einen eigenen Wert festlegen, z.B. eine andere E-Mail-Adresse, so können sie das DNA-Symbol deaktivieren und einen neuen Wert setzen."
+      },
+      "paymentTypesAmount": {
+        "question": "Warum kann ich keine Zahlungsmethode hinzufügen?",
+        "answer": "Die Anzahl der aktiven Zahlungsmethoden ist limitiert. Je nach aktuell verwendeter Lizenz variiert diese maximale Anzahl. Falls Sie noch weitere Zahlungsmethoden benötigen, können Sie die Gutschein-App in der Account-App upgraden."
+      }
+    },
+    "voucher": {
+      "createVoucher": {
+        "question": "Wie erstelle ich einen Gutschein?",
+        "answer": "Klicke auf den Button mit dem \"+\" am unteren rechten Bildschirmrand. Nun öffnet sich ein Dialog über welchen Sie einen der unterschiedlichen Gutscheintypen erstellen können."
+      },
+      "voucherTypes": {
+        "question": "Welche Arten von Gutscheinen gibt es?",
+        "answer": "Es gibt insgesamt 4 Gutscheintypen:<ul><li class='pt1'><b>Wertgutscheine:</b> Wertgutscheine stellen die klassischen Gutscheine dar und haben einen bestimmten Wert. Bei der Erstellung eines Wertgutscheins kann der minimale und maximale Wert des Gutscheins festgelegt werden.</li><li class='pt1'><b>Leistungsgutscheine:</b> Mit Leistungsgutscheine lassen sich bestimmte Produkte oder Dienstleistungen als Gutschein darstellen.</li><li class='pt1'><b>Behandlungsgutscheine:</b> Dieser Gutscheintyp ist nur ab der Lizenz \"Professional\" verfügbar. Mit diesem Gutschein lassen sich Behandlungen als Gutschein verschenken. Die Behandlungen werden dabei in der Inhalte-App eingepflegt.</li><li class='pt1'><b>Aufenthaltsgutscheine:</b> Dieser Gutscheintyp ist nur ab der Lizenz \"Professional\" verfügbar. Mit dem Aufenthaltsgutschein lassen sich Nächtigungen für eine beliebige Anzahl an Personen in einem beliebigen Zimmer verschenken. Die Zimmer werden dabei in der Inhalte-App verwaltet.</li></ul>"
+      },
+      "voucherSort": {
+        "question": "Wie kann ich meine Gutscheine sortieren?",
+        "answer": "Die Gutscheine werden nach zwei Kritieren sortiert: dem Erstellungsdatum und der Anzahl der Sterne. Je mehr Sterne ein Gutschein besitzt, desto weiter vorne wird dieser angezeigt. Wollen Sie also einen Gutschein besonders hervorheben, so können Sie dies mit der Erhöhung der Anzahl der Sterne erreichen."
+      },
+      "voucherUnlock": {
+        "question": "Was ist ein Freischaltcode?",
+        "answer": "Mit dem Freischaltcode haben Sie die Möglichkeit einen Gutschein zu verstecken. Wenn diese Funktion aktiviert ist, scheint dieser Gutschein nicht im Widget auf. Er erscheint sobald der definierte Freischaltcode in der dafür vorgesehenen Schaltfläche vom Nutzer eingegeben wird."
+      },
+      "voucherInhouse": {
+        "question": "Ich möchte für einen Kunden einen persönlichen Gutschein erstellen. Wie kann ich das machen?",
+        "answer": "Im Menüpunkt \"Übersicht\" können Sie eine neue Gutscheinbestellung durchführen, indem Sie dort auf den Button mit dem \"+\" am unteren rechten Bildschirmrand klicken. Dabei öffnet sich ein Dialogfenster, über welchen Sie eine Bestellung tätigen können."
+      },
+      "voucherWidget": {
+        "question": "Wie kann ich die Gutscheine in meine Webseite integrieren?",
+        "answer": "Unter dem Menüpunkt \"Widgets & Vorlagen\" haben wir bereits ein Widget für Sie erstellt. Dieses Widget können Sie grafisch nach Belieben anpassen und anschließend auf ihrer Webseite integrieren. Hierfür wird Ihnen ein HTML-Code zur Verfügung gestellt, welchen Sie in die gewünschte Webseite einbauen können. Grafische Anpassungen werden vom Widget auch nach dem Einbau berücksichtigt."
+      },
+      "voucherTemplate": {
+        "question": "Wo kann ich die Gutscheinvorlage anpassen?",
+        "answer": "Unter dem Menüpunkt \"Widgets & Vorlagen\" können Sie auf den Reiter \"Gutscheinvorlagen\" wechseln. Dort werden die unterschiedlichen Vorlagen angezeigt. Per Klick auf eine der Vorlagen können Sie diese ansehen und bearbeiten. Wenn Sie eine passende Vorlage gefunden haben, können Sie diese als Standard festlegen."
+      },
+      "publishVoucher": {
+        "question": "Warum wird der Gutschein nicht im Widget angezeigt?",
+        "answer": "Damit ein Gutschein im Widget erscheint, muss dieser veröffentlicht werden. Klicken Sie hierfür auf einen Gutschein in der Gutscheinliste und klicken sie anschließend auf das Symbol <img class=\"dib\" style=\"vertical-align: middle;\" width=\"19\" height=\"19\" src=\"/images/icons/publish.svg\"/> am oberen rechten Bildschirmrand. Im sich dann öffnenden Dialogfenster können Sie die Sprachen auswählen, in welchen der Gutschein veröffentlicht werden soll."
+      }
+    }
+  },
+  "colorsMenu": {
+    "standard": "Standardfarbe",
+    "main": "Hauptfarbe",
+    "accent": "Akzentfarbe",
+    "ambient": "Umgebungsfarbe"
+  }
+}
